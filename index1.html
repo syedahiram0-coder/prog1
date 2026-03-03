@@ -2,69 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>My GitHub Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: #f4f6f8;
-            margin: 0;
-            padding: 0;
             text-align: center;
-        }
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 30px 0;
-        }
-        section {
-            padding: 40px 20px;
-        }
-        h1 {
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 18px;
             color: #333;
         }
+
+        header {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            color: white;
+            padding: 40px 20px;
+        }
+
+        nav {
+            background: #1a252f;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
         .card {
             background: white;
-            max-width: 500px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin: 8px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2c3e50;
+        }
+
         footer {
             background: #2c3e50;
             color: white;
-            padding: 15px 0;
+            padding: 20px;
             margin-top: 40px;
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Welcome to My GitHub</h1>
-    <p>Computer Science Engineering Student</p>
+    <h1>Hi, I'm a CSE Student 👩‍💻</h1>
+    <p>Python Developer | Web Development Enthusiast</p>
 </header>
 
-<section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
     <div class="card">
         <h2>About Me</h2>
         <p>
-            Hi, I’m a 3rd year CSE student interested in Python and Web Development.
-            I enjoy learning new technologies and building simple projects.
+            I am a 3rd year Computer Science Engineering student passionate about 
+            Python and Web Development. I love building projects and continuously 
+            improving my technical skills.
         </p>
+    </div>
+</section>
 
-        <h2>Skills</h2>
-        <p>Python • HTML • CSS • Git • GitHub</p>
+<section id="projects">
+    <div class="card">
+        <h2>My Projects</h2>
+        <ul>
+            <li>✔ Linear Regression Sales Prediction</li>
+            <li>✔ K-Nearest Neighbor Implementation</li>
+            <li>✔ Simple Web Scraper in Python</li>
+        </ul>
+        <a href="#" class="btn">View More</a>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="card">
+        <h2>Contact Me</h2>
+        <p>Email: yourname@email.com</p>
+        <p>GitHub: github.com/yourusername</p>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 | Made by Me</p>
+    <p>© 2026 | Made with ❤️ by Me</p>
 </footer>
 
 </body>
