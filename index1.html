@@ -1,203 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Syeda Hiram | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Syeda Hiram | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<style>
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: #f4f6f8;
-            color: #333;
-            text-align: center;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-        header {
-            background: linear-gradient(to right, #2c3e50, #3498db);
-            color: white;
-            padding: 60px 20px;
-            animation: fadeIn 1.5s ease-in;
-        }
+body{
+font-family:Segoe UI, sans-serif;
+background:#f4f6f8;
+color:#333;
+text-align:center;
+}
 
-        header h1 {
-            font-size: 2.5rem;
-        }
+/* HEADER */
 
-        header p {
-            margin-top: 10px;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
+header{
+background:linear-gradient(to right,#2c3e50,#3498db);
+color:white;
+padding:60px 20px;
+}
 
-        nav {
-            background: #1a252f;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+header img{
+width:120px;
+height:120px;
+border-radius:50%;
+border:4px solid white;
+margin-bottom:15px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+header h1{
+font-size:2.5rem;
+}
 
-        nav a:hover {
-            color: #3498db;
-        }
+header p{
+margin-top:10px;
+opacity:0.9;
+}
 
-        section {
-            padding: 70px 20px;
-        }
+/* NAVIGATION */
 
-        .card {
-            background: white;
-            max-width: 700px;
-            margin: 20px auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeUp 1s ease;
-        }
+nav{
+background:#1a252f;
+padding:15px;
+position:sticky;
+top:0;
+}
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
+nav a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-weight:bold;
+transition:0.3s;
+}
 
-        h1, h2 {
-            margin-bottom: 15px;
-        }
+nav a:hover{
+color:#3498db;
+}
 
-        ul {
-            list-style: none;
-            padding: 10px 0;
-        }
+/* SECTIONS */
 
-        ul li {
-            margin: 10px 0;
-            font-size: 1rem;
-        }
+section{
+padding:70px 20px;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
+.card{
+background:white;
+max-width:700px;
+margin:20px auto;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
 
-        .btn:hover {
-            background: #2c3e50;
-        }
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
 
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 25px;
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
+h2{
+margin-bottom:15px;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+/* LIST */
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+ul{
+list-style:none;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
+ul li{
+margin:10px 0;
+}
 
-            nav a {
-                margin: 0 10px;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#3498db;
+color:white;
+text-decoration:none;
+border-radius:8px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#2c3e50;
+}
+
+/* FOOTER */
+
+footer{
+background:#2c3e50;
+color:white;
+padding:25px;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+header h1{
+font-size:1.8rem;
+}
+
+nav a{
+margin:0 10px;
+font-size:0.9rem;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Hi, I'm Syeda Hiram 👩‍💻</h1>
-    <p>3rd Year CSE Student | Python Developer | Web Enthusiast</p>
+
+<img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="profile">
+
+<h1>Hi, I'm Syeda Hiram 👩‍💻</h1>
+
+<p>3rd Year CSE Student | Python Developer | Web Enthusiast</p>
+
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+
 </nav>
 
 <section id="about">
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate Computer Science Engineering student with strong
-            interest in Python, Machine Learning, and Web Development.
-            I enjoy solving real-world problems and building practical projects.
-        </p>
-    </div>
+
+<div class="card">
+
+<h2>About Me</h2>
+
+<p>
+I am a passionate Computer Science Engineering student interested in
+Python, Machine Learning and Web Development.
+I enjoy building projects and learning new technologies.
+</p>
+
+</div>
+
 </section>
 
 <section id="projects">
-    <div class="card">
-        <h2>My Projects</h2>
-        <ul>
-            <li>✔ Linear Regression Sales Prediction</li>
-            <li>✔ K-Nearest Neighbor Algorithm Implementation</li>
-            <li>✔ Python Web Scraper</li>
-            <li>✔ GitHub Portfolio Website</li>
-        </ul>
-        <a href="#" class="btn">View GitHub Projects</a>
-    </div>
+
+<div class="card">
+
+<h2>My Projects</h2>
+
+<ul>
+
+<li>✔ Linear Regression Sales Prediction</li>
+<li>✔ K-Nearest Neighbor Algorithm</li>
+<li>✔ Python Web Scraper</li>
+<li>✔ GitHub Portfolio Website</li>
+
+</ul>
+
+<a href="https://github.com/yourusername" class="btn">View GitHub</a>
+
+</div>
+
 </section>
 
 <section id="skills">
-    <div class="card">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>✔ Python</li>
-            <li>✔ HTML & CSS</li>
-            <li>✔ Machine Learning Basics</li>
-            <li>✔ Git & GitHub</li>
-        </ul>
-    </div>
+
+<div class="card">
+
+<h2>Technical Skills</h2>
+
+<ul>
+
+<li>✔ Python</li>
+<li>✔ HTML & CSS</li>
+<li>✔ Machine Learning Basics</li>
+<li>✔ Git & GitHub</li>
+
+</ul>
+
+</div>
+
 </section>
 
 <section id="contact">
-    <div class="card">
-        <h2>Contact Me</h2>
-        <p>Email: yourname@email.com</p>
-        <p>GitHub: github.com/yourusername</p>
-        <a href="mailto:yourname@email.com" class="btn">Send Email</a>
-    </div>
+
+<div class="card">
+
+<h2>Contact Me</h2>
+
+<p>Email: syeda@example.com</p>
+<p>GitHub: github.com/syedahiram0-coder</p>
+
+<a href="mailto:syeda@example.com" class="btn">Send Email</a>
+
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Syeda Hiram | Built with HTML & CSS 💙</p>
+
+<p>© 2026 Syeda Hiram | Built with HTML & CSS 💙</p>
+
 </footer>
 
 </body>
