@@ -27,7 +27,7 @@ line-height:1.6;
 header{
 background:linear-gradient(135deg,#1e3c72,#2a5298);
 color:white;
-padding:70px 20px;
+padding:80px 20px;
 }
 
 header img{
@@ -39,7 +39,7 @@ margin-bottom:15px;
 }
 
 header h1{
-font-size:2.6rem;
+font-size:2.7rem;
 }
 
 header p{
@@ -78,7 +78,7 @@ padding:70px 20px;
 
 .card{
 background:white;
-max-width:750px;
+max-width:900px;
 margin:25px auto;
 padding:35px;
 border-radius:15px;
@@ -92,19 +92,49 @@ box-shadow:0 12px 30px rgba(0,0,0,0.18);
 }
 
 h2{
-margin-bottom:15px;
+margin-bottom:20px;
 color:#1e3c72;
 }
 
-/* LIST */
+/* PROJECT GRID */
 
-ul{
-list-style:none;
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:20px;
 }
 
-ul li{
-margin:10px 0;
-font-size:1rem;
+.project{
+background:#f1f5f9;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.project:hover{
+background:#e2e8f0;
+transform:scale(1.03);
+}
+
+/* SKILL BARS */
+
+.skill{
+margin:15px 0;
+text-align:left;
+}
+
+.bar{
+background:#ddd;
+height:8px;
+border-radius:5px;
+overflow:hidden;
+}
+
+.bar span{
+display:block;
+height:100%;
+background:#2563eb;
 }
 
 /* BUTTON */
@@ -126,7 +156,7 @@ background:#1e40af;
 transform:scale(1.05);
 }
 
-/* SOCIAL LINKS */
+/* SOCIAL */
 
 .social a{
 margin:0 10px;
@@ -175,7 +205,7 @@ padding:25px;
 
 <header>
 
-<img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="profile">
+<img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png">
 
 <h1>Hi, I'm Syeda Hiram 👩‍💻</h1>
 
@@ -215,14 +245,29 @@ My goal is to become a skilled software developer and contribute to innovative t
 
 <h2>My Projects</h2>
 
-<ul>
+<div class="projects">
 
-<li>📊 Linear Regression Sales Prediction (Python)</li>
-<li>🤖 K-Nearest Neighbor Algorithm</li>
-<li>🌐 Python Web Scraper</li>
-<li>💻 GitHub Portfolio Website</li>
+<div class="project">
+<h3>📊 Sales Prediction</h3>
+<p>Linear Regression model using Python.</p>
+</div>
 
-</ul>
+<div class="project">
+<h3>🤖 KNN Algorithm</h3>
+<p>Machine learning classification project.</p>
+</div>
+
+<div class="project">
+<h3>🌐 Web Scraper</h3>
+<p>Python scraper to collect website data.</p>
+</div>
+
+<div class="project">
+<h3>💻 Portfolio Website</h3>
+<p>Personal portfolio built with HTML & CSS.</p>
+</div>
+
+</div>
 
 <a href="https://github.com/syedahiram0-coder" class="btn">View GitHub</a>
 
@@ -236,14 +281,25 @@ My goal is to become a skilled software developer and contribute to innovative t
 
 <h2>Technical Skills</h2>
 
-<ul>
+<div class="skill">
+Python
+<div class="bar"><span style="width:85%"></span></div>
+</div>
 
-<li>✔ Python</li>
-<li>✔ HTML & CSS</li>
-<li>✔ Machine Learning Basics</li>
-<li>✔ Git & GitHub</li>
+<div class="skill">
+HTML & CSS
+<div class="bar"><span style="width:80%"></span></div>
+</div>
 
-</ul>
+<div class="skill">
+Machine Learning
+<div class="bar"><span style="width:70%"></span></div>
+</div>
+
+<div class="skill">
+Git & GitHub
+<div class="bar"><span style="width:75%"></span></div>
+</div>
 
 </div>
 
@@ -258,8 +314,10 @@ My goal is to become a skilled software developer and contribute to innovative t
 <p>Email: syeda@example.com</p>
 
 <div class="social">
+
 <a href="https://github.com/syedahiram0-coder">GitHub</a> |
 <a href="#">LinkedIn</a>
+
 </div>
 
 <a href="mailto:syeda@example.com" class="btn">Send Email</a>
