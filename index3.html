@@ -12,6 +12,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -26,6 +27,15 @@ header{
 text-align:center;
 padding:80px 20px;
 background:linear-gradient(120deg,#1e293b,#3b82f6);
+}
+
+.profile-pic{
+width:140px;
+height:140px;
+border-radius:50%;
+border:4px solid white;
+margin-bottom:20px;
+object-fit:cover;
 }
 
 header h1{
@@ -46,6 +56,8 @@ justify-content:center;
 gap:30px;
 background:#020617;
 padding:15px;
+position:sticky;
+top:0;
 }
 
 nav a{
@@ -98,20 +110,43 @@ background:#334155;
 margin-bottom:10px;
 }
 
+.project-card button{
+margin-top:10px;
+padding:8px 15px;
+border:none;
+background:#3b82f6;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.project-card button:hover{
+background:#2563eb;
+}
+
 /* SKILLS */
 
 .skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-margin-top:20px;
+margin-top:30px;
 }
 
-.skill{
-background:#3b82f6;
-padding:10px 18px;
+.skill-bar{
+margin-bottom:15px;
+}
+
+.skill-bar p{
+margin-bottom:5px;
+}
+
+.bar{
+background:#1e293b;
 border-radius:20px;
+overflow:hidden;
+}
+
+.progress{
+background:#3b82f6;
+height:10px;
 }
 
 /* CONTACT */
@@ -134,6 +169,48 @@ border-radius:6px;
 background:#2563eb;
 }
 
+/* CONTACT FORM */
+
+form{
+margin-top:20px;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+button.submit-btn{
+background:#3b82f6;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+button.submit-btn:hover{
+background:#2563eb;
+}
+
+/* BACK TO TOP */
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#3b82f6;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:50%;
+cursor:pointer;
+display:none;
+}
+
 /* FOOTER */
 
 footer{
@@ -149,6 +226,8 @@ margin-top:40px;
 <body>
 
 <header>
+
+<img src="https://i.imgur.com/4Z7b1bB.png" class="profile-pic">
 
 <h1>Syeda Hiram 👩‍💻</h1>
 <p>CSE Student | Python Developer | Web Learner</p>
@@ -185,21 +264,25 @@ I enjoy creating projects and learning new technologies.
 <div class="project-card">
 <h3>Sales Prediction</h3>
 <p>Linear Regression model to predict weekly sales.</p>
+<button>View Code</button>
 </div>
 
 <div class="project-card">
 <h3>KNN Algorithm</h3>
 <p>Implemented K-Nearest Neighbor classification in Python.</p>
+<button>View Code</button>
 </div>
 
 <div class="project-card">
 <h3>Web Scraper</h3>
 <p>Python scraper to collect website data automatically.</p>
+<button>View Code</button>
 </div>
 
 <div class="project-card">
 <h3>Portfolio Website</h3>
 <p>Personal website hosted using GitHub Pages.</p>
+<button>View Code</button>
 </div>
 
 </div>
@@ -212,12 +295,25 @@ I enjoy creating projects and learning new technologies.
 
 <div class="skills">
 
-<div class="skill">Python</div>
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">Machine Learning</div>
-<div class="skill">Git</div>
-<div class="skill">GitHub</div>
+<div class="skill-bar">
+<p>Python</p>
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+</div>
+
+<div class="skill-bar">
+<p>HTML</p>
+<div class="bar"><div class="progress" style="width:85%"></div></div>
+</div>
+
+<div class="skill-bar">
+<p>CSS</p>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+</div>
+
+<div class="skill-bar">
+<p>Machine Learning</p>
+<div class="bar"><div class="progress" style="width:70%"></div></div>
+</div>
 
 </div>
 
@@ -230,7 +326,18 @@ I enjoy creating projects and learning new technologies.
 <p>Feel free to connect with me.</p>
 
 <a href="#">GitHub</a>
+<a href="#">LinkedIn</a>
 <a href="#">Email</a>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button class="submit-btn">Send Message</button>
+
+</form>
 
 </section>
 
@@ -239,6 +346,27 @@ I enjoy creating projects and learning new technologies.
 <p>© 2026 Syeda Hiram | Portfolio Website</p>
 
 </footer>
+
+<button onclick="topFunction()" id="topBtn">↑</button>
+
+<script>
+
+var mybutton = document.getElementById("topBtn");
+
+window.onscroll = function() {
+if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+mybutton.style.display = "block";
+} else {
+mybutton.style.display = "none";
+}
+};
+
+function topFunction() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
+
+</script>
 
 </body>
 </html>
